@@ -7,8 +7,29 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- navigation  -->
-
-  
+  <!-- navbar container  -->
+  <nav class="relative container mx-auto p-6">
+    <!-- flex container for entire navbar items  -->
+    <div class="flex items-center justify-between">
+      <!-- flex container for logo/menu -->
+      <div class="flex space-x-20 items-center">
+        <!-- logo -->
+        <img src="images/logo.svg" alt="">
+        <!-- left menu -->
+        <div class="hidden items-center space-x-8 font-bold lg:flex">
+          <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Features</a>
+          <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Pricing</a>
+          <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Resources</a>
+        </div>
+      </div>
+      <!-- Right menu -->
+      <div class="hidden items-center space-x-6 text-grayishViolet font-bold lg:flex">
+        <div class="hover:text-veryDarkViolet">Login</div>
+        <a href="#" class="bg-cyan py-3 px-8 rounded-full text-white font-bold hover:opacity-70">Sign Up</a>
+      </div>
+      <!-- @todo hamburger menu -->
+    </div>
+    <!-- @todo mobile menu -->
+  </nav>
 </body>
 </html>
