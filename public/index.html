@@ -1,35 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shortly</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- navbar container  -->
-  <nav class="relative container mx-auto p-6">
-    <!-- flex container for entire navbar items  -->
-    <div class="flex items-center justify-between">
-      <!-- flex container for logo/menu -->
-      <div class="flex space-x-20 items-center">
-        <!-- logo -->
-        <img src="images/logo.svg" alt="">
-        <!-- left menu -->
-        <div class="hidden items-center space-x-8 font-bold lg:flex">
-          <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Features</a>
-          <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Pricing</a>
-          <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Resources</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shortly</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- navbar container  -->
+    <nav class="relative container mx-auto p-6">
+      <!-- flex container for entire navbar items  -->
+      <div class="flex items-center justify-between">
+        <!-- flex container for logo/menu -->
+        <div class="flex space-x-20 items-center">
+          <!-- logo -->
+          <img src="images/logo.svg" alt="" />
+          <!-- left menu -->
+          <div class="hidden items-center space-x-8 font-bold lg:flex">
+            <a href="#" class="text-grayishViolet hover:text-veryDarkViolet"
+              >Features</a
+            >
+            <a href="#" class="text-grayishViolet hover:text-veryDarkViolet"
+              >Pricing</a
+            >
+            <a href="#" class="text-grayishViolet hover:text-veryDarkViolet"
+              >Resources</a
+            >
+          </div>
         </div>
+        <!-- Right menu -->
+        <div
+          class="hidden items-center space-x-6 text-grayishViolet font-bold lg:flex"
+        >
+          <div class="hover:text-veryDarkViolet">Login</div>
+          <a
+            href="#"
+            class="bg-cyan py-3 px-8 rounded-full text-white font-bold hover:opacity-70"
+            >Sign Up</a
+          >
+        </div>
+        <!-- @todo hamburger menu -->
       </div>
-      <!-- Right menu -->
-      <div class="hidden items-center space-x-6 text-grayishViolet font-bold lg:flex">
-        <div class="hover:text-veryDarkViolet">Login</div>
-        <a href="#" class="bg-cyan py-3 px-8 rounded-full text-white font-bold hover:opacity-70">Sign Up</a>
+      <!-- @todo mobile menu -->
+    </nav>
+    
+    <!-- Hero section -->
+    <section id="hero" class="mb-40">
+      <!-- Hero container -->
+      <div class="container flex flex-col-reverse justify-between mx-auto p-6 lg:flex-row">
+        <!-- content container -->
+        <div class="flex flex-col space-y-10">
+          <div
+            class="text-5xl text-veryDarkViolet font-bold text-center lg:max-w-md lg:text-6xl lg:text-left lg:mt-16"
+          >
+            More than just shorter links
+          </div>
+          <p
+            class="text-2xl text-center lg:max-w-md text-grayishViolet lg:text-left"
+          >
+            Build your brand's recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <div class="max-w-sm mx-auto lg:mx-0">
+            <a
+              href="#"
+              class="bg-cyan py-5 px-10 text-center text-2xl font-bold text-white rounded-full lg:py-4 lg:text-left hover:opacity-70"
+              >Get Started</a
+            >
+          </div>
+        </div>
+        <img src="images/illustration-working.svg" alt="" class="mb-24 mx-auto md:w-180 lg:w-1/2 lg:mb-0">
       </div>
-      <!-- @todo hamburger menu -->
-    </div>
-    <!-- @todo mobile menu -->
-  </nav>
-</body>
+    </section>
+    
+    <!-- Shorten section -->
+    <section id="shorten" class="bg-gray-100">
+      <div class="max-w-4xl mx-auto p-6 space-y-6">
+        <!-- Form -->
+        <form id="link-form" class="relative flex flex-col space-y-4 w-full -mt-20 md:flex-row md:space-y-0 md:space-x-3
+          rounded-lg p-10 bg-darkViolet">
+          <input type="text" id="link-input" class="flex-1 p-3 border-2 rounded-lg placeholder:text-yellow-500
+          focus:outline-none" placeholder="Shorten a link here">
+          <button
+          class="px-10 py-3 text-white bg-cyan rounded-lg hover:bg-cyanLight focus:outline-none md:py-2"
+        >
+          Shorten It!
+        </button>
+        <div id="error-msg" class="absolute bottom-3 left-7 text-red text-sm"></div>
+        </form>
+        <!-- link 1 -->
+        <div class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg shadow-xl md:flex-row md:space-y-0">
+          <p class="font-bold text-veryDarkViolet">
+            https://frontendmentor.io
+          </p>
+          <div class="flex flex-col flex-1 space-y-2 items-center justify-end md:flex-row md:space-x-4">
+            <p class="text-cyan font-bold">https://rel.ink/k4IKyk</p>
+            <button class="bg-cyan py-2 px-8 text-white rounded-lg hover:opacity-70">Copy</button>
+          </div>
+          </div>
+      
+            <!-- link 2 -->
+        <div class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg shadow-xl md:flex-row">
+          <p class="font-bold text-veryDarkViolet">
+            https://twitter.com/frontendmentor          
+          </p>
+          <div class="flex flex-col space-y-2 items-center justify-end md:flex-row md:space-y-0 md:space-x-4">
+            <p class="text-cyan font-bold">https://rel.ink/gxOXp9</p>
+            <button class="bg-veryDarkViolet py-2 px-8 text-white rounded-lg hover:opacity-70">Copy</button>
+          </div>
+          </div>
+            
+            <!-- link 3 -->
+        <div class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg shadow-xl md:flex-row">
+          <p class="font-bold text-veryDarkViolet">
+            https://linkedin.com/frontend-mentor          
+          </p>
+          <div class="flex flex-col space-y-2 items-center justify-end space-x-4 md:flex-row md:space-y-0">
+            <p class="text-cyan font-bold">https://rel.ink/gob3X9</p>
+            <button class="bg-cyan py-2 px-8 text-white rounded-lg hover:opacity-70">Copy</button>
+          </div>
+          </div>
+        </div>
+      </div>      
+      </div>
+    </section>  
+  </body>
 </html>
