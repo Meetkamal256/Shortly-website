@@ -33,6 +33,4 @@ function formSubmit(e){
         input.classList.remove('border-red');
         alert('success');
     }
-
 }
-
